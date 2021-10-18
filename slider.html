@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider</title>
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <script defer src="assets/js/script.js"></script>
+  <script>
+    window.onload = function() {
+      // ви можете зробити скільки завгодно слайдів
+      let slides = [
+        {
+          title: "Google",
+          background: "assets/img/slider-1.jpg",
+          link: "http://google.com"
+        },
+        {
+          title: "Yahoo",
+          background: "assets/img/slider-2.jpg",
+          link: "http://yahoo.com"
+        },
+        {
+          title: "YouTube",
+          background: "assets/img/slider-3.jpeg",
+          link: "https://www.youtube.com/"
+        }
+      ]
+      Slider.initSlider(slides);
+    };
+  </script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="#">
+        <img src="./assets/img/logo.png" alt="logo">
+      </a>
+    </div>
+    <h1>Main Page</h1>
+  </header>
+
+  <div class="container">
+    <main class="center column">
+      <article>
+        <div id="slider"></div>
+        <button onclick="Slider.prevSlide()">Prev</button>
+        <button onclick="Slider.nextSlide()">Next</button>
+        <button onclick="Slider.hideSlide()">Hide/Show slider</button>
+        <button class = "toggleBtn start">Start</button><br>
+        <button onclick="Slider.setSlide(0)">1</button>
+        <button onclick="Slider.setSlide(1)">2</button>
+        <button onclick="Slider.setSlide(2)">3</button>
+      </article>
+    </main>
+    <nav class="left column">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Main page</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="slider.html">Slider</a></li>
+        <li><a href="table.html">Table</a></li>
+      </ul>
+    </nav>
+    <div class="right column">
+      <h3>Right heading</h3>
+      <p></p>
+    </div>
+  </div>
+  <div class="footer-wrapper">
+    <footer class="footer">
+      <img class="copyright" src="./assets/img/copyright.png" alt="copyright">
+    </footer>
+  </div>
+</body>
+</html>

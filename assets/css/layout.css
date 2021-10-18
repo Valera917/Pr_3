@@ -1,0 +1,299 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.footer,
+.push {
+    height: 50px;
+}
+
+.container {
+    padding-left: 200px;
+    padding-right: 190px;
+    min-height: calc(100% - 80px);
+    margin-bottom: -50px;
+}
+
+.container .column {
+    position: relative;
+    float: left;
+}
+
+.center {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.left {
+    width: 180px;
+    padding: 0 10px;
+    right: 240px;
+    margin-left: -100%;
+}
+
+.right {
+    width: 130px;
+    padding: 0 10px;
+    margin-right: -100%;
+}
+
+.footer {
+    clear: both;
+}
+.container {
+    overflow: hidden;
+}
+.container .column {
+    padding-bottom: 1001em;
+    margin-bottom: -1000em;
+}
+
+.footer-wrapper {
+    float: left;
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+
+.copyright {
+    height: 25px;
+    width: 25px;
+    padding: 20px 0 0 20px;
+}
+
+p {
+    color: #555;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul a {
+    color: darkgreen;
+    text-decoration: none;
+}
+.header,
+.footer {
+    font-size: large;
+    padding: 0.3em;
+    background: #bcce98;
+}
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    background: #dae9bc;
+}
+.right {
+    background: #f7fdeb;
+}
+.center {
+    background: #fff;
+}
+.container .column {
+    padding-top: 1em;
+}
+
+.header__logo img {
+    height: 50px;
+    width: 50px;
+    float: left;
+    padding: 5px;
+    margin-right: 20px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+form > div {
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    padding-top: 0;
+}
+form > div > p,
+select,
+input,
+textarea {
+    color: rgb(29, 49, 165);
+    background-color: rgb(185, 203, 241);
+    width: 100%;
+    font-size: 10pt;
+    border: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+form > div > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+form > div > div > input {
+    width: 65%;
+}
+form > div > div > select {
+    width: 35%;
+}
+form > div > p {
+    border-bottom: 0;
+}
+.button {
+    background-color: rgb(28, 131, 145);
+    color: rgb(253, 253, 253);
+    width: 35%;
+    height: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.chech {
+    width: 10%;
+}
+
+.copyright {
+    background-image: url("./img/copyright.png");
+}
+
+tr > * {
+    border: 1.5px solid #680BAB;
+    background-color: #FFB400;
+    color: #090974;
+    font-size: 18px;
+    padding: 20px 30px;
+    margin: 0;
+    text-align: center;
+}
+tr > th {
+    background-color: #3F92D2;
+    padding: 15px;
+}
+
+#slider{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+a.link {
+  padding: 10px 25px;
+  background-color: #4CA74C;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.singleSlide {
+  height: 300px;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* стилі для анімації нижче */
+
+@-webkit-keyframes slideIn {
+  100% { left: 0; }
+}
+
+@keyframes slideIn {
+  100% { left: 0; }
+}
+
+.slideInRight {
+  left: -100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+  left: 100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+  100% { left: -100%; }
+}
+
+@keyframes slideOutLeft {
+  100% { left: -100%; }
+}
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 1s forwards;
+  animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+  100% { left: 100%; }
+}
+
+@keyframes slideOutRight {
+  100% { left: 100%; }
+}
+
+.slideOutRight {
+  -webkit-animation: slideOutRight 1s forwards;
+  animation: slideOutRight 1s forwards;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: #81a4ff;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}
+
+button:nth-child(5) {
+  margin-right: 0;
+}
+
+.modal__items {
+  margin-top: 150px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
