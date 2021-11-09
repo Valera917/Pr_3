@@ -12,8 +12,8 @@ body {
 }
 
 table {
-  border-collapse: collapse;
-  margin: 0 auto;
+    border-collapse: collapse;
+    margin: 0 auto;
 }
 
 .footer,
@@ -128,6 +128,7 @@ form {
     width: 100%;
     justify-content: center;
 }
+
 form > div {
     width: 100%;
     padding: 30px;
@@ -136,7 +137,6 @@ form > div {
 }
 form > div > p,
 select,
-input,
 textarea {
     color: rgb(29, 49, 165);
     background-color: rgb(185, 203, 241);
@@ -183,8 +183,8 @@ form > div > p {
 }
 
 tr > * {
-    border: 1.5px solid #680BAB;
-    background-color: #FFB400;
+    border: 1.5px solid #680bab;
+    background-color: #ffb400;
     color: #090974;
     font-size: 18px;
     padding: 20px 30px;
@@ -192,6 +192,111 @@ tr > * {
     text-align: center;
 }
 tr > th {
-    background-color: #3F92D2;
+    background-color: #3f92d2;
     padding: 15px;
+}
+
+button {
+    background-color: #2c4da7; /* Green */
+    border: none;
+    border-radius: 24px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+a.link {
+    padding: 10px 25px;
+    background-color: #4ca74c;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.singleSlide {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top: 0;
+}
+/* стилі для анімації нижче */
+
+@-webkit-keyframes slideIn {
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideIn {
+    100% {
+        left: 0;
+    }
+}
+.hidden {
+    display: none;
+}
+
+.slideInRight {
+    left: -100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+    left: 100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes slideOutLeft {
+    100% {
+        left: -100%;
+    }
+}
+
+.slideOutLeft {
+    -webkit-animation: slideOutLeft 1s forwards;
+    animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes slideOutRight {
+    100% {
+        left: 100%;
+    }
+}
+
+.slideOutRight {
+    -webkit-animation: slideOutRight 1s forwards;
+    animation: slideOutRight 1s forwards;
+}
+
+.hide {
+    display: none;
 }

@@ -47,7 +47,21 @@
         <button onclick="Slider.prevSlide()">Prev</button>
         <button onclick="Slider.nextSlide()">Next</button>
         <button onclick="Slider.hideSlide()">Hide/Show slider</button>
-        <button class = "toggleBtn start">Start</button><br>
+        <button onclick="start()">Start</button><br>
+        <script>
+          function start() {
+            if (event.target.classList.contains('start')){
+              event.target.innerHTML = 'Start';
+              clearInterval(interval)
+            } else {
+              event.target.innerHTML = 'Stop';
+              interval = setInterval(()=>{
+                Slider.nextSlide();
+              }, 2000)
+            }
+            event.target.classList.toggle('start')
+          }
+        </script>
         <button onclick="Slider.setSlide(0)">1</button>
         <button onclick="Slider.setSlide(1)">2</button>
         <button onclick="Slider.setSlide(2)">3</button>
